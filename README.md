@@ -32,6 +32,8 @@ STEP:7 compare the output with truth table.
 Logic Gates:
 
 
+
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
 
 
@@ -80,12 +82,19 @@ input a,b;
 output andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate;
 
 and(andgate,a,b);
+
 or(orgate,a,b);
+
 xor(xorgate,a,b);
+
 nand(nandgate,a,b);
+
 nor(norgate,a,b);
+
 xnor(xnorgate,a,b);
+
 not(notgate,a);
+
 endmodule
 
 HALF ADDER:
@@ -161,9 +170,13 @@ endmodule
 
 OUTPUT:
 
+# LOGIC GATES:
+
 
 <img width="855" alt="LOGIC" src="https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/d5fd1f18-75b7-4c70-9baf-6734d3a2322f">
 
+
+# HALF ADDER:
 
 
 <img width="809" alt="ha" src="https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/1707f843-4915-488b-a8da-097d6d18dd1c">
