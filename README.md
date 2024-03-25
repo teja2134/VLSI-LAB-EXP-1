@@ -1,11 +1,11 @@
 # VLSI-LAB-EXPERIMENTS
 # AIM: 
 
-To simulate and synthesis Logic Gates,Adders and Subtractor using vivado.
+To simulate and synthesis Logic Gates,Adders and Subtractor using vivado 2023.2.
 
 # APPARATUS REQUIRED: 
        
-vivado 2023
+vivado 2023.2
 
 # PROCEDURE: 
 
