@@ -215,7 +215,7 @@ endmodule
 
 
 
-OUTPUT:
+# OUTPUT:
 
 # LOGIC GATES:
 
