@@ -61,7 +61,7 @@ not(notgate,a);
 
 endmodule
 
-# OUTPUT:
+OUTPUT:
 
 ![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/81da60ba-7a2d-47de-8fc5-aa20461a4ccf)
 
@@ -178,7 +178,7 @@ and g5(w3,~w1,bin);
 
 endmodule
 
-# OUTPUT:
+OUTPUT:
 
 ![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/72fafa30-8094-4516-947a-c193e6184121)
 
