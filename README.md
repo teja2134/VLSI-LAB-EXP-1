@@ -1,4 +1,9 @@
-# VLSI-LAB-EXPERIMENTS
+
+# SIMULATION AND IMPLEMENTATION OF LOGIC GATES, ADDERS & SUBTRACTOR
+
+DATE:
+
+
 # AIM: 
 
 To simulate and synthesis Logic Gates,Adders and Subtractor using vivado 2023.2.
@@ -25,19 +30,63 @@ STEP:7 compare the output with truth table.
 
 
 
-# Logic Diagram :
+# LOGIC GATES:
 
-
-
-Logic Gates:
-
-
+LOGIC DIAGRAM: 
 
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
 
+# VERILOG CODE:
 
-Half Adder:
+module logic(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate );
+
+input a,b;
+
+output andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate;
+
+and(andgate,a,b);
+
+or(orgate,a,b);
+
+xor(xorgate,a,b);
+
+nand(nandgate,a,b);
+
+nor(norgate,a,b);
+
+xnor(xnorgate,a,b);
+
+not(notgate,a);
+
+endmodule
+
+# OUTPUT:
+
+![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/81da60ba-7a2d-47de-8fc5-aa20461a4ccf)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
