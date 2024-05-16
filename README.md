@@ -37,7 +37,7 @@ LOGIC DIAGRAM:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
 
-# VERILOG CODE:
+VERILOG CODE:
 
 module logic(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate );
 
@@ -65,31 +65,189 @@ endmodule
 
 ![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/81da60ba-7a2d-47de-8fc5-aa20461a4ccf)
 
+# HALF ADDER:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+LOGIC DIAGRAM:
 
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
+
+VERILOG CODE:
+
+module HalfAdder(a,b,sum,carry);
+
+input a,b;
+
+output sum,carry;
+
+xor (sum,a,b);
+
+and (carry,a,b);
+
+endmodule
+
+OUTPUT: 
+ 
+
+![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/cae0a533-1492-425f-b942-8075f1f74939)
+
+
+
+# FULL ADDER:
+
+LOGIC DIAGRAM:
+
+![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/59f197a3-909a-4f02-84c9-42b02801d529)
+ 
+VERILOG CODE:
+
+module FA(a,b,cin,sum,cout);
+
+input a,b,cin;
+
+output sum,cout;
+
+wire w1,w2,w3;
+
+xor g1(w1,a,b);
+
+and g2(w2,w1,cin);
+
+and g3(w3,a,b);
+
+xor g4(sum,w1,cin);
+
+or g5(cout,w2,w3);
+
+endmodule
+
+OUTPUT:
+
+![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/62f683d1-5760-48de-b295-7ff817b0b307)
+ 
+
+# HALF SUBTRACTOR:
+
+LOGIC DIAGRAM:
+
+![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/0e969027-6bbc-43d3-9c6d-6f8983237610)
+
+ 
+VERILOG CODE:
+
+module halfsubtractor(a,b,diff,borrow);
+
+input a,b;
+
+output diff,borrow;
+
+xor g1(diff,a,b);
+
+and g2(borrow,~a,b);
+
+endmodule
+
+OUTPUT:
+
+ ![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/588a71ec-3b48-44c7-a0d3-bfa46afbf162)
+
+
+# FULL SUBRACTOR:
+
+LOGIC DIAGRAM:
+
+![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/15e8b5a6-5fe3-4324-9f01-b6060ba9bc58)
+ 
+VERILOG CODE:
+
+module full_sub(a,b,bin,diff,borrow);
+
+input a,b,bin;
+
+output diff,borrow;
+
+wire w1,w2,w3;
+
+xor g1(w1,a,bin);
+
+and g2(w2,~a,b);
+
+xor g3(diff,w1,bin);
+
+or g4(borrow,w2,w3);
+
+and g5(w3,~w1,bin);
+
+endmodule
+
+# OUTPUT:
+
+![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/72fafa30-8094-4516-947a-c193e6184121)
+
+ # 8 BIT RIPPLE CARRY ADDER:
+
+LOGIC DIAGRAM:
+
+ ![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/ed0ae650-362f-4014-8b42-fffaf3ea1956)
+
+
+VERILOG CODE:
+
+module fa(a,b,c,sum,carry);
+
+input a,b,c;
+
+output sum,carry;
+
+assign sum = a^b^c;
+
+assign carry=(a&b)|(b&c)|(c&a);
+
+endmodule
+
+module rca(a,b,cin,sum,cout);
+
+input [7:0]a,b;
+
+input cin;
+
+output [7:0]sum;
+
+output cout;
+
+wire c1,c2,c3,c4,c5,c6,c7;
+
+fa fa1(a[0],b[0],cin,sum[0],c1);
+
+fa fa2(a[1],b[1],c1,sum[1],c2);
+
+fa fa3(a[2],b[2],c2,sum[2],c3);
+
+fa fa4(a[3],b[3],c3,sum[3],c4);
+
+fa fa5(a[4],b[4],c4,sum[4],c5);
+
+fa fa6(a[5],b[5],c5,sum[5],c6);
+
+fa fa7(a[6],b[6],c6,sum[6],c7);
+
+fa fa8(a[7],b[7],c7,sum[7],cout);
+
+endmodule
+
+OUTPUT:
+
+![image](https://github.com/teja2134/VLSI-LAB-EXP-1/assets/161149578/e02ad118-ccf5-4898-8006-306ae7108613)
+
+
+
+
+
+
+
+
+
+
+
 
 
 Full adder:
